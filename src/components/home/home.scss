@@ -1,0 +1,330 @@
+@import "../../responsive.scss";
+
+.home{
+    flex: 8;
+    background-color: rgb(241, 241, 249);
+    font-family: sans-serif;
+
+    .container{
+        margin-top: 1rem;
+        margin-inline: auto;
+
+        .content{
+            width: 80%;
+            margin-inline: auto;
+
+            @include mobile{
+                width: 90%;
+            }
+
+            .logo{
+    
+                img{
+                    display: flex;
+                    margin-inline: auto;
+                    width: 4rem;
+                }
+            }
+    
+            .topSection{
+                margin-top: 1rem;
+                background-color: white;
+                border: 2px solid rgb(204, 204, 204);
+                border-radius: .3rem;
+                padding: 1rem;
+    
+                .title{
+                    text-align: center;
+                    width: 30%;
+                    margin-inline: auto;
+
+                    @include mobile{
+                        width: 80%;
+                    }
+                }
+    
+                .bottomArea{
+                    display: flex;
+                    width: 80%;
+                    margin-inline: auto;
+                    margin-top: 1rem;
+                    justify-content: space-between;
+
+                    @include mobile{
+                        display: none;
+                    }
+                }
+            }
+    
+            .formPersonInfo{
+                margin-top: 3rem;
+                background-color: white;
+                border: 2px solid rgb(204, 204, 204);
+                border-radius: 10px;
+                padding: 1rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+    
+                .label{
+                    position: absolute;
+                    padding: 4px 8px;
+                    background-color: #0081C9;
+                    color: white;
+                    border-radius: 0 10px 0 10px;
+                    top: 0;
+                    right: 0;
+                    font-size: .8rem;
+
+                    @include mobile{
+                        font-size: 1rem;
+                    }
+                }
+    
+                .name{
+                   border-bottom: 1px dotted gray; 
+                   padding: .2rem;
+
+                   @include mobile{
+                        font-size: 1.2rem;
+                    }
+    
+                   span{
+                    font-weight: bold;
+                   }
+                }
+    
+                .address{
+                    border-bottom: 1px dotted gray; 
+                    padding: .2rem;
+
+                    @include mobile{
+                        font-size: 1.2rem;
+                    }
+
+                    span{
+                        font-weight: bold;
+                    }
+                }
+    
+                .location{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1rem;
+
+                    @include mobile{
+                        grid-template-columns: repeat(1, 1fr);
+                        font-size: 1.2rem;
+                    }
+    
+                    .loc{
+                        border-bottom: 1px dotted gray; 
+                        padding: .2rem;
+    
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+    
+            .formRegistration{
+                margin-top: 1rem;
+                background-color: white;
+                border: 2px solid rgb(204, 204, 204);
+                border-radius: 10px;
+                padding: 1rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .topArea{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: .5rem;
+
+                    @include mobile{
+                        grid-template-columns: repeat(1, 1fr);
+                        font-size: 1.2rem;
+                    }
+
+                    .data{
+                        border-bottom: 1px dotted gray;
+                        padding: .2rem;
+
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .middleArea{
+                    .data{
+                        border-bottom: 1px dotted gray;
+                        padding: .2rem;
+
+                        @include mobile{
+                            font-size: 1.2rem;
+                        }
+
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .bottomArea{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: .5rem;
+
+                    @include mobile{
+                        grid-template-columns: repeat(1, 1fr);
+                        font-size: 1.2rem;
+                    }
+
+                    .data{
+                        border-bottom: 1px dotted gray;
+                        padding: .2rem;
+                        font-weight: 500;
+
+                        span{
+                            font-weight: 600;
+                        }
+                    }
+                    
+                }
+            }
+
+            .termsCondition{
+                margin-top: 1rem;
+                background-color: white;
+                border: 2px solid rgb(204, 204, 204);
+                border-radius: 10px;
+                padding: 1rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .topArea{
+                    width: 30%;
+                    margin-inline: auto;
+                    text-align: center;
+
+                    @include mobile{
+                        width: 50%;  
+                    }
+
+                    p{
+                        background-color: rgb(195, 1, 1);
+                        color: white;
+                        width: fit-content;
+                        margin-inline: auto;
+                        padding: .2rem .4rem;
+                        border-radius: .2rem;
+
+                        @include mobile{
+                            padding: .4rem .5rem;
+                        }
+                    }
+                }
+
+                form{
+                    margin-top: 1rem;
+                    width: 80%;
+                    margin-inline: auto;
+
+                    @include mobile{
+                        width: 100%;  
+                    }
+
+                    .checkboxArea{
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        width: 80%;
+                        margin-inline: auto;
+
+                        @include mobile{
+                            width: 90%;  
+                        }
+
+                        input[type=checkbox]{
+                            transform: scale(1.2);
+                            outline: 1px solid rgb(56, 85, 253);
+                        }
+
+                        label{
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .buttons{
+                        margin-top: 1rem;
+                        display: flex;
+                        justify-content: center;
+                        gap: 1rem;
+
+                        button{
+                            padding: .2rem .6rem;
+                            border: none;
+                            color: white;
+                            border-radius: .3rem;
+                            font-size: inherit;
+
+                            &:nth-child(1){
+                                background-color: rgb(24, 177, 24);
+                            }
+
+                            &:nth-child(2){
+                                background-color: rgb(177, 159, 24);
+                            }
+
+                            &:nth-child(3){
+                                background-color: rgb(24, 95, 177);
+                            }
+
+                            &:nth-child(4){
+                                background-color: rgb(78, 86, 78);
+                            }
+                        }
+                    }
+                }
+
+                p{
+                    @include mobile{
+                        color: rgb(37, 131, 239); 
+                    }
+                }
+            }
+
+            .mobileContent{
+                margin-top: 1rem;
+                text-align: center;
+
+                @include desktop{
+                    display: none;  
+                }
+                
+                
+                p{
+                    color: black;
+                    font-size: 1rem;
+                }
+            }
+            
+            .bottomLabel{
+                margin-top: 1rem;
+
+                @include mobile{
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+    }
+}

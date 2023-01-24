@@ -1,0 +1,88 @@
+@import "../../responsive.scss";
+
+.sidebar{
+    flex: 1.2;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    padding: 1.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    @include mobile{
+        display: none;
+    }
+
+    .icon{
+        font-size: 1.5rem;
+    }
+
+    .single-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5rem;
+        padding: .4rem .6rem;
+        transition: .3s;
+        border-radius: .3rem;
+
+        &:hover{
+            background-color: #F1F1F9;
+            transition: .3s;
+        }
+
+        .menu-title{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+    }
+
+    .multi-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: .5rem;
+        padding: .4rem .6rem;
+        transition: .3s;
+        border-radius: .3rem;
+
+        &:hover{
+            background-color: #F1F1F9;
+            transition: .3s;
+        }
+
+        .sub-menu{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .menu-title{
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+            }
+        }
+
+        .dropdown-menu{
+            list-style: none;
+            width: 100%;
+            padding-left: 1rem;
+
+            li{
+                padding: .4rem .8rem;
+            }
+        }
+    }
+}
