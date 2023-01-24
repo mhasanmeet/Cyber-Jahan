@@ -70,6 +70,67 @@
                 }
             }
 
+            .notification{
+                position: relative;
+
+                p{
+                    position: absolute;
+                    top: -7px;
+                    right: -3px;
+                    background-color: rgb(56, 140, 250);
+                    padding: 3px 5px;
+                    color: white;
+                    border-radius: 4px;
+                    font-size: .6rem;
+                }
+
+            }
+
+            .message{
+                position: relative;
+
+                .notificnumber{
+                    position: absolute;
+                    top: -7px;
+                    right: -3px;
+                    background-color: green;
+                    padding: 3px 5px;
+                    color: white;
+                    border-radius: 4px;
+                    font-size: .6rem;
+                }
+
+                .notficationArea{
+                    position: absolute;
+                    top: 2rem;
+                    width: 20rem;
+                    background-color: white;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    right: 0;
+                    border: .5rem;
+
+                    .topmenu{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 1rem;
+
+                        .view{
+                            background-color: rgb(29, 110, 241);
+                            color: white;
+                            padding: .2rem;
+                            font-size: .8rem;
+                            border-radius: .5rem;
+                        }
+                    }
+
+                    .showall{
+                        padding: 1rem;
+                        text-align: center;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
             .user{
                 display: flex;
                 align-items: center;

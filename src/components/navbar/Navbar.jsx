@@ -3,9 +3,11 @@ import desktopImg from "../../assets/img/cj-logo-desktop.png";
 import { FcMenu } from 'react-icons/fc';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiBell, BiMessageDetail } from 'react-icons/bi';
-import {subMenu} from "./userData";
+import {subMenu} from "../../data/userData";
 import { IoMdArrowDropdown } from 'react-icons/io';
 import "./navbar.scss";
+import {notificData} from "../../data/notificdata";
+import Notificard from '../notificard/Notificard';
 
 const languageList = [
     {id: "1", value: "English"},
@@ -15,9 +17,14 @@ const languageList = [
 function Navbar() {
     const [language, setLanguage] = useState(languageList[0])
     const [showMenu, setShowMenu] = useState(false)
+    const [showNotific, setShowNotific] = useState(false)
 
     const handleClick = () =>{
         setShowMenu(!showMenu)
+    }
+
+    const handleShowNotific = () =>{
+        setShowNotific(!showNotific)
     }
 
   return (
@@ -51,16 +58,41 @@ function Navbar() {
 
                 <div className="notification">
                     <BiBell className="icon"/>
+                    <p>4</p>
                 </div>
 
                 <div className="message">
-                    <BiMessageDetail className="icon"/>
+                    <BiMessageDetail className="icon" onClick={handleShowNotific}/>
+                    <p className="notificnumber">3</p>
+                    
+                    {showNotific && 
+                        (   
+                            <div className="notficationArea">
+                                <div className="topmenu">
+                                    <p>You have 4 new message</p>
+                                    <p className="view">View all</p>
+                                </div>
+
+                                <ul className="notification">
+                                    {notificData.map((notific, index) => {
+                                        return(
+                                            <Notificard key={index} data={notific}/>
+                                        )
+                                    })}
+                                </ul>
+
+                                <p className="showall">Show all message</p>
+                            </div>
+                        )
+                    }
+                    
                 </div>
 
                 <div className="user">
                     <div className="userImg">
                         <img src="https://source.unsplash.com/iEEBWgY_6lA" alt="" />
                     </div>
+
                     John Doe
 
                     <div className="menuBtn">
