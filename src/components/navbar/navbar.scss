@@ -82,6 +82,34 @@
                         object-fit: cover;
                     }
                 }
+
+                .menuBtn{
+                    position: relative;
+
+                    .submenu{
+                        position: absolute;
+                        right: 0;
+                        margin-top: 1rem;
+                        width: 15rem;
+                        border-radius: .5rem;
+                        background-color: white;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+                        .userInfo{
+                            padding: 1rem .5rem;
+                            text-align: center;
+                        }
+
+                        ul{
+                            padding: .5rem;
+                            border-top: 1px solid rgb(210, 236, 254);
+
+                            &:hover{
+                                background-color: rgb(241, 241, 249);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

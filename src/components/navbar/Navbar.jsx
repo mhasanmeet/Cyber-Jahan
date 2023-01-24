@@ -3,6 +3,7 @@ import desktopImg from "../../assets/img/cj-logo-desktop.png";
 import { FcMenu } from 'react-icons/fc';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiBell, BiMessageDetail } from 'react-icons/bi';
+import {subMenu} from "./userData";
 import { IoMdArrowDropdown } from 'react-icons/io';
 import "./navbar.scss";
 
@@ -13,6 +14,11 @@ const languageList = [
 
 function Navbar() {
     const [language, setLanguage] = useState(languageList[0])
+    const [showMenu, setShowMenu] = useState(false)
+
+    const handleClick = () =>{
+        setShowMenu(!showMenu)
+    }
 
   return (
     <div className="navbar">
@@ -56,7 +62,25 @@ function Navbar() {
                         <img src="https://source.unsplash.com/iEEBWgY_6lA" alt="" />
                     </div>
                     John Doe
-                    <IoMdArrowDropdown className="icon"/>
+
+                    <div className="menuBtn">
+                        <IoMdArrowDropdown className="icon" onClick={handleClick}/>
+
+                        {showMenu && 
+                            <div className="submenu">
+                                <div className="userInfo">
+                                    <h3>MD Any Name</h3>
+                                    <p>Senior Sales Executive</p>
+                                </div>
+
+                                {subMenu.map((title, index) => {
+                                    return(
+                                        <ul key={index}>{title.menuItem}</ul>
+                                    )
+                                })}
+                            </div>
+                        }
+                    </div>
                 </div>
                 
             </div>
